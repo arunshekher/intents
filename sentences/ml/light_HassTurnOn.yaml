@@ -2,7 +2,12 @@ language: ml
 intents:
   HassTurnOn:
     data:
-      - sentences: []
+      - sentences:
+          - "<area>[<in>] ലൈറ്റ് <turn_on>"
+          - "<area>[<in>] <all> (ലൈറ്റും|ലൈറ്റുകളും) <turn_on>"
+          - "<all> <area> ലൈറ്റുകളും <turn_on>"
+          - "<area><in> <the> വിളക്ക് <turn_on>"
+          - "<turn> <area><in> <all> (ലാമ്പും|ലാമ്പുകളും) ഓൺ"
         slots:
           domain: light
           name: all

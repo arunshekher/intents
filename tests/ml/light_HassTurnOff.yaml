@@ -1,8 +1,12 @@
 language: ml
 tests:
-  - sentences: []
+  - sentences:
+      - "അണക്കുക എല്ലാ വിളക്കുകളും ഈ അടുക്കളയിലെ"
+      - "നിർത്തൂ എല്ലാ അടുക്കള ലാമ്പും"
+      - "ആക്കൂ മുഴുവൻ ലൈറ്റും അടുക്കളയിലെ ഓഫ്"  
     intent:
       name: HassTurnOff
       slots:
+        area: kitchen
         domain: light
         name: all

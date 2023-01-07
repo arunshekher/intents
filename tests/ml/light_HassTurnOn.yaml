@@ -1,8 +1,14 @@
 language: ml
 tests:
-  - sentences: []
+  - sentences:
+      - "സ്വീകരണമുറി ലൈറ്റ് ഇടുക"
+      - "സ്വീകരണമുറിയിലെ എല്ലാ ലൈറ്റുകളും ഇടുക"
+      - "എല്ലാ ജീവനമുറി ലൈറ്റുകളും തെളിക്കുക"
+      - "സ്വീകരണമുറിയിലെ ആ വിളക്ക് ഓണാക്കുക"
+      - "ചെയ്യുക ജീവനമുറിയിലെ എല്ലാ ലാമ്പുകളും ഓൺ"
     intent:
       name: HassTurnOn
       slots:
+        area: living_room      
         domain: light
         name: all

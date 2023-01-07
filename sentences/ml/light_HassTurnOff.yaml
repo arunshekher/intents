@@ -2,7 +2,10 @@ language: ml
 intents:
   HassTurnOff:
     data:
-      - sentences: []
+      - sentences:
+          - "<turn_off> <all> (വിളക്കും|വിളക്കുകളും) <the> <area><in>"
+          - "<turn_off> <all> <area> (ലാമ്പും|ലാമ്പുകളും)"
+          - "<turn> <all> (ലൈറ്റും|ലൈറ്റുകളും) <area><in> ഓഫ്"
         slots:
           domain: light
           name: all
