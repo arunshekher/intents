@@ -9,7 +9,7 @@ data:
   - sentences:
       - "<turn_on> [<the>] {name} {area}<in>"
       - "[<the>] {area}<in> [<the>] {name} <turn_on>"
-    example: "സ്വീകരണമുറിയിലെ കിടപ്പറ വിളക്ക് ഓണാക്കൂ"
+    example: "സ്വീകരണമുറിയിലെ തറവിളക്ക് ഓണാക്കൂ"
     name_domains: "default"
     response: "default"
 
