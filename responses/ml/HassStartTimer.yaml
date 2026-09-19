@@ -3,7 +3,7 @@ responses:
   intents:
     HassStartTimer:
       default: >-
-        {% set numbers = {'ഒന്ന്': 1, 'ഒരു': 1, 'രണ്ട്': 2, 'മൂന്ന്': 3, 'നാല്': 4, 'അഞ്ച്': 5, 'ആറ്': 6, 'ഏഴ്': 7, 'എട്ട്': 8, 'ഒൻപത്': 9, 'ഒമ്പത്': 9, 'പത്ത്': 10} %}
+        {% set numbers = {'കാൽ': 15, '1/4': 15, 'അര': 30, '1/2': 30, 'മുക്കാൽ': 45, '3/4': 45, 'ഒന്ന്': 1, 'ഒരു': 1, 'രണ്ട്': 2, 'മൂന്ന്': 3, 'നാല്': 4, 'അഞ്ച്': 5, 'ആറ്': 6, 'ഏഴ്': 7, 'എട്ട്': 8, 'ഒൻപത്': 9, 'ഒമ്പത്': 9, 'പത്ത്': 10} %}
         {% set hours = numbers.get(slots.hours | default(''), slots.hours | default(0)) | int %}
         {% set minutes = numbers.get(slots.minutes | default(''), slots.minutes | default(0)) | int %}
         {% set seconds = numbers.get(slots.seconds | default(''), slots.seconds | default(0)) | int %}
@@ -19,7 +19,7 @@ responses:
         {% endif %}
         {% if slots.name is defined %}{{ slots.name | trim }} എന്ന {% endif %}{{ parts | join(' ') }} ടൈമർ തുടങ്ങി
       command: >-
-        {% set numbers = {'ഒന്ന്': 1, 'ഒരു': 1, 'രണ്ട്': 2, 'മൂന്ന്': 3, 'നാല്': 4, 'അഞ്ച്': 5, 'ആറ്': 6, 'ഏഴ്': 7, 'എട്ട്': 8, 'ഒൻപത്': 9, 'ഒമ്പത്': 9, 'പത്ത്': 10} %}
+        {% set numbers = {'കാൽ': 15, '1/4': 15, 'അര': 30, '1/2': 30, 'മുക്കാൽ': 45, '3/4': 45, 'ഒന്ന്': 1, 'ഒരു': 1, 'രണ്ട്': 2, 'മൂന്ന്': 3, 'നാല്': 4, 'അഞ്ച്': 5, 'ആറ്': 6, 'ഏഴ്': 7, 'എട്ട്': 8, 'ഒൻപത്': 9, 'ഒമ്പത്': 9, 'പത്ത്': 10} %}
         {% set hours = numbers.get(slots.hours | default(''), slots.hours | default(0)) | int %}
         {% set minutes = numbers.get(slots.minutes | default(''), slots.minutes | default(0)) | int %}
         {% set seconds = numbers.get(slots.seconds | default(''), slots.seconds | default(0)) | int %}
