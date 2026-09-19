@@ -17,7 +17,11 @@ responses:
         {% if seconds > 0 %}
         {% set parts = parts + [seconds ~ (' നൊടി' if seconds == 1 else ' നൊടികൾ')] %}
         {% endif %}
-        {% if (hours == 0) and (minutes == 0) and (seconds > 0) %}
+        {% if (hours > 0) and (minutes == 0) and (seconds == 0) %}
+        {% set duration = hours ~ (' മണിക്കൂറിന്റെ' if hours == 1 else ' മണിക്കൂറുകളുടെ') %}
+        {% elif (hours == 0) and (minutes > 0) and (seconds == 0) %}
+        {% set duration = minutes ~ (' നിമിഷത്തിന്റെ' if minutes == 1 else ' നിമിഷങ്ങളുടെ') %}
+        {% elif (hours == 0) and (minutes == 0) and (seconds > 0) %}
         {% set duration = seconds ~ (' നൊടിയുടെ' if seconds == 1 else ' നൊടികളുടെ') %}
         {% else %}
         {% set duration = parts | join(' ') %}
